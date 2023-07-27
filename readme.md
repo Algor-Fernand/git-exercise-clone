@@ -61,10 +61,11 @@ To https://github.com/Algor-Fernand/git-exercise.git
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 
 DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (ft/bundle-2)
+```
 
-BUNDLE 3 Exercise 1
+#TerminalLogs BUNDLE 3 Exercise 1
 
-
+```bash
 DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (main)
 $ git checkout ft/team-page 
 Switched to branch 'ft/team-page'
