@@ -1,8 +1,9 @@
-#Git Exercise
+# Git Exercise
 
 This project will be used for Git exercise & practice.
 
-#TerminalLogs BUNDLE2 Exercise 1
+# Bundle2
+## Exercise 1
 
 ```bash
 DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (dev)
@@ -63,7 +64,8 @@ branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (ft/bundle-2)
 ```
 
-#TerminalLogs BUNDLE 3 Exercise 1
+# Bundle 3 
+## Exercise 1
 
 ```bash
 DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (main)
@@ -421,4 +423,120 @@ To https://github.com/Algor-Fernand/git-exercise.git
 
 DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (ft/faq-page)
 $
-´´´
+```
+## Exercise 2
+
+```bash
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (main)
+$ git add .
+
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (main)
+$ git commit -m "added home page content"
+[main d8cd649] added home page content
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 350 bytes | 350.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Algor-Fernand/git-exercise.git
+   a22b284..d8cd649  main -> main
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (main)
+$ git checkout ft/home-page-redesign 
+Switched to branch 'ft/home-page-redesign'
+
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git log
+commit 2765cbfc7043263ebbe1fc4032020b4afa56427d (HEAD -> ft/home-page-redesign)
+Author: Algor Fernand <algorfernand014@gmail.com>
+Date:   Wed Jul 26 12:37:45 2023 +0200
+
+    Revert "add team page"
+
+    This reverts commit 17e82682f64c51bffe86aa1c3a88110581460d88.
+
+commit 63d0b05fe4d70bfd7cc013404fc28445a7056765
+Author: Algor Fernand <algorfernand014@gmail.com>
+Date:   Wed Jul 26 12:35:20 2023 +0200
+
+    faq added
+
+
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git add .
+
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git commit -m "content changed"
+[ft/home-page-redesign a9a1734] content changed
+ 1 file changed, 6 insertions(+)
+
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (ft/home-page-redesign)
+$     git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.60 KiB | 545.00 KiB/s, done.
+Total 14 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/Algor-Fernand/git-exercise/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/Algor-Fernand/git-exercise.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+DOLPHIX ELECTRONICS@DESKTOP-TJ49EDU MINGW64 ~/git-exercise (ft/home-page-redesign)
+$
+```
